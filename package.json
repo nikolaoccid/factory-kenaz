@@ -10,6 +10,8 @@
     "lint": "eslint '*/**/*.{js,ts,tsx}'"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
@@ -27,6 +29,7 @@
     "husky": "^4.3.8",
     "lint-staged": "^13.2.1",
     "prettier": "^2.8.7",
+    "react-router-dom": "^6.10.0",
     "typescript": "^4.9.3",
     "vite": "^4.2.0",
     "vite-plugin-eslint": "^1.8.1"
