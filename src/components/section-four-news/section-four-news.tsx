@@ -8,6 +8,7 @@ interface Props {
   color: string;
   title: string;
 }
+
 const Container = styled.div<{ shadowColor: string }>`
   display: flex;
   flex-direction: column;
