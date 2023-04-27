@@ -6,8 +6,8 @@ const Container = styled.div`
   gap: 33px;
   padding-top: 10px;
 `;
-const Title = styled.text`
-  font-family: 'Bitter';
+const Title = styled.p`
+  font-family: 'Bitter', serif;
   font-style: normal;
   font-weight: 700;
   font-size: 24px;

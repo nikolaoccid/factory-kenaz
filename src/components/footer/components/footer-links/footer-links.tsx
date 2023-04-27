@@ -15,7 +15,7 @@ const ItemsGroup = styled.div`
   display: flex;
   justify-content: space-between;
 `;
-const BodyText = styled.text`
+const BodyText = styled.p`
   font-family: 'Varela Round', serif;
   font-style: normal;
   font-weight: 400;

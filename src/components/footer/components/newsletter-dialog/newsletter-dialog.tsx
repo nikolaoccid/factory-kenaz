@@ -6,7 +6,7 @@ const Container = styled.div`
   gap: 33px;
   padding-top: 10px;
 `;
-const Title = styled.text`
+const Title = styled.p`
   font-family: 'Bitter', sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -14,7 +14,7 @@ const Title = styled.text`
   line-height: 29px;
   color: #cccccc;
 `;
-const BodyText = styled.text`
+const BodyText = styled.p`
   font-family: 'Bitter', sans-serif;
   font-style: normal;
   font-weight: 400;

@@ -18,8 +18,7 @@ const TitleHeader = styled.div`
   justify-content: flex-start;
   gap: 18px;
 `;
-const TitleImage = styled.img``;
-const Title = styled.text`
+const Title = styled.p`
   font-family: 'Bitter', sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -27,7 +26,7 @@ const Title = styled.text`
   line-height: 52px;
   color: #45b0e3;
 `;
-const BodyText = styled.text`
+const BodyText = styled.p`
   font-family: 'Bitter', sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -38,7 +37,6 @@ const BodyText = styled.text`
 const Body = styled.div`
   width: 303px;
 `;
-const Icon = styled.img``;
 const SocialMediaIcons = styled.div`
   display: flex;
   flex-direction: row;
@@ -48,7 +46,7 @@ export const SocialMediaDialog = () => {
   return (
     <Container>
       <TitleHeader>
-        <TitleImage src={arrowImage} />
+        <img src={arrowImage} />
         <Title>Kenaz</Title>
       </TitleHeader>
       <Body>
@@ -57,22 +55,22 @@ export const SocialMediaDialog = () => {
 
       <SocialMediaIcons>
         <a href="#">
-          <Icon src={rss}></Icon>
+          <img src={rss}></img>
         </a>
         <a href="#">
-          <Icon src={fb}></Icon>
+          <img src={fb}></img>
         </a>
         <a href="#">
-          <Icon src={twitter}></Icon>
+          <img src={twitter}></img>
         </a>
         <a href="#">
-          <Icon src={dribble}></Icon>
+          <img src={dribble}></img>
         </a>
         <a href="#">
-          <Icon src={youtube}></Icon>
+          <img src={youtube}></img>
         </a>
         <a href="#">
-          <Icon src={skype}></Icon>
+          <img src={skype}></img>
         </a>
       </SocialMediaIcons>
     </Container>

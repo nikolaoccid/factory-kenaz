@@ -14,7 +14,7 @@ const Social = styled.a`
   align-items: center;
   justify-content: center;
 `;
-const Text = styled.text`
+const Text = styled.p`
   display: flex;
   align-items: center;
   padding-left: 16px;
@@ -29,7 +29,7 @@ const Text = styled.text`
   line-height: 18px;
   color: #363f48;
 `;
-const Fans = styled.text`
+const Fans = styled.p`
   display: flex;
   padding-left: 16px;
   align-items: center;

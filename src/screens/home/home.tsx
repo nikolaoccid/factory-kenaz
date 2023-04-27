@@ -52,7 +52,7 @@ export const Home = () => {
           <Banner620120 />
         </Body>
         <SideBar>
-          {/*<SocialDialog />*/}
+          <SocialDialog />
           {/*<DoubleBanner300250 />*/}
         </SideBar>
       </InnerContainer>

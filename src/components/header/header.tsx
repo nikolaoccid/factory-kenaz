@@ -12,7 +12,7 @@ const Container = styled.div`
   justify-content: center;
   background-color: #252525;
 `;
-const HeadingText = styled.text`
+const HeadingText = styled.p`
   font-family: 'Bitter', serif;
   font-style: normal;
   font-weight: 400;

@@ -9,8 +9,8 @@ const Container = styled.div`
   flex-direction: column;
   gap: 18px;
 `;
-const Title = styled.text`
-  font-family: 'Bitter';
+const Title = styled.p`
+  font-family: 'Bitter', serif;
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
