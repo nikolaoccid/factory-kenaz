@@ -13,7 +13,7 @@ const Navigation = styled.nav`
   align-items: center;
   height: 53px;
 `;
-const NavItem = styled(Link)<{ borderColor: string }>`
+const NavItem = styled(Link)<{ bordercolor: string }>`
   font-family: 'Bitter', serif;
   font-style: normal;
   font-weight: 700;
@@ -25,32 +25,32 @@ const NavItem = styled(Link)<{ borderColor: string }>`
   padding: 14px 15px;
   border-bottom-width: 3px;
   border-bottom-style: solid;
-  border-bottom-color: ${(props) => props.borderColor};
+  border-bottom-color: ${(props) => props.bordercolor};
   &:active,
   &:hover {
-    background-color: ${(props) => props.borderColor};
+    background-color: ${(props) => props.bordercolor};
   }
 `;
 export const MainNavbar = () => {
   return (
     <Container>
       <Navigation>
-        <NavItem to="/" borderColor="#299EC3">
+        <NavItem to="/" bordercolor="#299EC3">
           News
         </NavItem>
-        <NavItem to="/" borderColor="#EE6151">
+        <NavItem to="/" bordercolor="#EE6151">
           Business
         </NavItem>
-        <NavItem to="/" borderColor="#84C14F">
+        <NavItem to="/" bordercolor="#84C14F">
           Sport
         </NavItem>
-        <NavItem to="/" borderColor="#5DCFF3">
+        <NavItem to="/" bordercolor="#5DCFF3">
           Life
         </NavItem>
-        <NavItem to="/" borderColor="#FCC44D">
+        <NavItem to="/" bordercolor="#FCC44D">
           Tech
         </NavItem>
-        <NavItem to="/" borderColor="#A99765">
+        <NavItem to="/" bordercolor="#A99765">
           Travel
         </NavItem>
       </Navigation>

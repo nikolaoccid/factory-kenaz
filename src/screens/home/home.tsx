@@ -4,11 +4,13 @@ import React from 'react';
 import { Banner620120 } from '../../components/banner-620-120/banner-620-120';
 import { Banner940120 } from '../../components/banner-940-120/banner-940-120';
 import { Divider } from '../../components/divider/divider';
+import { DoubleBanner300250 } from '../../components/double-banner-300-250/double-banner-300-250';
 import { Footer } from '../../components/footer/footer';
 import { Header } from '../../components/header/header';
 import { MainNavbar } from '../../components/main-navbar/main-navbar';
 import { SectionFourNews } from '../../components/section-four-news/section-four-news';
 import { SectionThreeNews } from '../../components/section-three-news/section-three-news';
+import { SocialDialog } from '../../components/social-dialog/social-dialog';
 const Container = styled.div`
   display: flex;
   flex: 1;
@@ -32,7 +34,7 @@ const Body = styled.div`
 `;
 const SideBar = styled.div`
   display: flex;
-  background-color: dimgray;
+  flex-direction: row;
   width: 318px;
 `;
 export const Home = () => {
@@ -49,7 +51,10 @@ export const Home = () => {
           <SectionFourNews color="#EE6151" title="Business" />
           <Banner620120 />
         </Body>
-        <SideBar>Side bar section</SideBar>
+        <SideBar>
+          {/*<SocialDialog />*/}
+          {/*<DoubleBanner300250 />*/}
+        </SideBar>
       </InnerContainer>
       <Divider />
       <Footer />

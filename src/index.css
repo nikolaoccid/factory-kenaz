@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Bitter:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
-#root {
-  /*height: 100%;*/
-  /*width: 100%;*/
-}
 #root > div > div {
   display: flex;
 }
