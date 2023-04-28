@@ -34,8 +34,9 @@ const Body = styled.div`
 `;
 const SideBar = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   width: 318px;
+  gap: 25px;
 `;
 export const Home = () => {
   return (
@@ -53,7 +54,7 @@ export const Home = () => {
         </Body>
         <SideBar>
           <SocialDialog />
-          {/*<DoubleBanner300250 />*/}
+          <DoubleBanner300250 />
         </SideBar>
       </InnerContainer>
       <Divider />

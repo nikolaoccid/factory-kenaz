@@ -59,7 +59,7 @@ export const NewsletterDialog = () => {
         <BodyText>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus leo ante.</BodyText>
       </Body>
       <form>
-        <InputText type="text" id="email" name="email" />
+        <InputText type="text" id="email" name="email" placeholder="Your mail" />
         <InputButton type="submit" value="Subscribe" />
       </form>
     </Container>

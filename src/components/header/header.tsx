@@ -31,9 +31,6 @@ const InnerContainer = styled.div`
   justify-content: space-between;
 
   flex-direction: row;
-  //background-color: #252525;
-  //padding-left: 330px;
-  //padding-right: 330px;
   height: 53px;
   width: 940px;
 `;
