@@ -7,6 +7,7 @@ import youtube from './assets/Youtube-squared.png';
 const Container = styled.div`
   display: flex;
   flex-direction: column;
+  gap: 7px;
 `;
 const Social = styled.a`
   text-decoration: none;
@@ -48,9 +49,19 @@ const Image = styled.img`
   width: 40px;
   height: 40px;
 `;
+const Title = styled.h2`
+  font-family: 'Bitter', serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  color: #363f48;
+  margin-bottom: 15px;
+`;
 export const SocialDialog = () => {
   return (
     <Container>
+      <Title>Social</Title>
       <Social href="">
         <Image src={fb} />
         <Text>Like</Text>

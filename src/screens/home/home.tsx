@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 import React from 'react';
 
+import { ArticlesWidget } from '../../components/articles-widget/articles-widget';
 import { Banner620120 } from '../../components/banner-620-120/banner-620-120';
 import { Banner940120 } from '../../components/banner-940-120/banner-940-120';
 import { Divider } from '../../components/divider/divider';
@@ -53,6 +54,7 @@ export const Home = () => {
           <Banner620120 />
         </Body>
         <SideBar>
+          <ArticlesWidget />
           <SocialDialog />
           <DoubleBanner300250 />
         </SideBar>
