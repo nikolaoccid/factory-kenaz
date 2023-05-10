@@ -10,6 +10,7 @@ interface Props {
 
 import articleImage from './assets/article-image.png';
 const Container = styled(Link)`
+  cursor: grab;
   display: flex;
   flex-direction: row;
   gap: 15px;

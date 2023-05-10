@@ -6,6 +6,7 @@ interface Props {
   linkTo: string;
 }
 const Anchor = styled(Link)`
+  cursor: grab;
   font-family: 'Varela Round', sans-serif;
   font-style: normal;
   font-weight: 400;

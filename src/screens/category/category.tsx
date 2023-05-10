@@ -13,6 +13,7 @@ import { Header } from '../../components/header/header';
 import { MainNavbar } from '../../components/main-navbar/main-navbar';
 import { SocialDialog } from '../../components/social-dialog/social-dialog';
 import { CategoryTitle } from './components/category-title/category-title';
+import { Pagination } from './components/pagination/pagination';
 const Container = styled.div`
   display: flex;
   flex: 1;
@@ -82,6 +83,7 @@ export const Category = () => {
               bodyText="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo. "
               linkTo="/"
             />
+            <Pagination />
           </InnerBody>
           <Banner620120 />
         </Body>

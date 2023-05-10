@@ -50,10 +50,10 @@ export const Home = () => {
       {/*<HeaderSlider />*/}
       <InnerContainer>
         <Body>
-          <SectionThreeNews color="#299ec3" title="News" />
-          <SectionThreeNews color="#84C14F" title="Sport" />
+          <SectionThreeNews color="#299ec3" title="news" />
+          <SectionThreeNews color="#84C14F" title="sport" />
           <Banner620120 />
-          <SectionFourNews color="#EE6151" title="Business" />
+          <SectionFourNews color="#EE6151" title="business" />
           <Banner620120 />
         </Body>
         <SideBar>

@@ -11,6 +11,7 @@ const Container = styled.div`
   height: 53px;
 `;
 const NavItem = styled(Link)`
+  cursor: grab;
   font-family: 'Varela Round', sans-serif;
   font-style: normal;
   font-weight: 400;
