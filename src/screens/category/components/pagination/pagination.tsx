@@ -6,7 +6,7 @@ const Container = styled.div`
   flex-direction: row;
   gap: 10px;
 
-  padding: 15px 0 15px 30px;
+  padding: 30px 0 20px 30px;
 `;
 const PaginationItem = styled(Link)`
   cursor: grab;
