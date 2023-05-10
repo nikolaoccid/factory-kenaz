@@ -3,6 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 interface Props {
   text: string;
+  linkTo: string;
 }
 const Anchor = styled(Link)`
   font-family: 'Varela Round', sans-serif;
@@ -17,6 +18,6 @@ const Anchor = styled(Link)`
   border-bottom-width: 1px;
   text-decoration: none;
 `;
-export const SectionLink = ({ text }: Props) => {
-  return <Anchor to="/">{text}</Anchor>;
+export const SectionLink = ({ text, linkTo }: Props) => {
+  return <Anchor to={linkTo}>{text}</Anchor>;
 };

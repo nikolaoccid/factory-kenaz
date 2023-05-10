@@ -19,6 +19,10 @@ const Container = styled(Link)`
   border-bottom-width: 1px;
   border-bottom-style: solid;
   border-bottom-color: rgba(0, 0, 1, 0.2);
+
+  &:hover {
+    background-color: #423c70;
+  }
 `;
 const ArticleDate = styled.div`
   font-family: 'Varela Round', sans-serif;

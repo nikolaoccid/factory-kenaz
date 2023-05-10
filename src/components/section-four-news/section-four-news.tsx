@@ -50,7 +50,7 @@ export const SectionFourNews = ({ color, title }: Props) => {
       <InnerContainer>
         <Header>
           <SectionHeading text={title} />
-          <SectionLink text="See all" />
+          <SectionLink text="See all" linkTo={title} />
         </Header>
         <Body>
           <Row>
