@@ -7,7 +7,7 @@ interface Props {
 }
 import { Link } from 'react-router-dom';
 
-import articleImage from './assets/article-image.png';
+import articleImage from '/article-image-people.png';
 const Container = styled(Link)`
   cursor: grab;
   display: flex;

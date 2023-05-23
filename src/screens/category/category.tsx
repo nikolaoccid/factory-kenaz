@@ -1,6 +1,5 @@
 import styled from '@emotion/styled';
 import React from 'react';
-import { useLocation } from 'react-router-dom';
 
 import { ArticlesWidget } from '../../components/articles-widget/articles-widget';
 import { Banner620120 } from '../../components/banner-620-120/banner-620-120';
@@ -12,6 +11,7 @@ import { Footer } from '../../components/footer/footer';
 import { Header } from '../../components/header/header';
 import { MainNavbar } from '../../components/main-navbar/main-navbar';
 import { SocialDialog } from '../../components/social-dialog/social-dialog';
+import { getPath } from '../../utils/get-path';
 import { CategoryTitle } from './components/category-title/category-title';
 import { Pagination } from './components/pagination/pagination';
 const Container = styled.div`
@@ -45,10 +45,6 @@ const SideBar = styled.div`
 const InnerBody = styled.div`
   background-color: #ffffff;
 `;
-const getCategoryTitle = () => {
-  const location = useLocation();
-  return location.pathname.substring(1);
-};
 export const Category = () => {
   return (
     <Container>
@@ -58,7 +54,7 @@ export const Category = () => {
       <InnerContainer>
         <Body>
           <InnerBody>
-            <CategoryTitle text={getCategoryTitle()} />
+            <CategoryTitle text={getPath()} />
             <CategoryArticle
               author="Matej Sudar"
               title="Patriotsvv make cuts ... and Tim Tebow survives (so far)"

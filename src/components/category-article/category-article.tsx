@@ -44,7 +44,7 @@ const MetadataSection = styled.div`
   flex-direction: row;
   gap: 35px;
 `;
-const Metadata = styled.text`
+const Metadata = styled.div`
   font-family: 'Varela Round';
   font-style: normal;
   font-weight: 400;
