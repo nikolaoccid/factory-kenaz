@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const Container = styled.div`
@@ -10,7 +10,7 @@ const Container = styled.div`
   justify-content: center;
   height: 53px;
 `;
-const NavItem = styled(Link)`
+const NavItem = styled(Link)<{ isActive: boolean }>`
   cursor: grab;
   font-family: 'Varela Round', sans-serif;
   font-style: normal;
@@ -18,33 +18,31 @@ const NavItem = styled(Link)`
   font-size: 14px;
   line-height: 17px;
   padding: 32px 12px;
-  color: #ffffff;
   text-decoration: none;
+  color: ${(props) => (props.isActive ? '#fcc44d' : '#ffffff')};
   &:hover {
     color: #fcc44d;
   }
 `;
-const NavText = styled.span`
+const NavText = styled.span<{ isActive: boolean }>`
   border-bottom-width: 1px;
   border-bottom-style: solid;
-  border-bottom-color: rgba(172, 179, 186, 0.3);
+  border-bottom-color: ${(props) => (props.isActive ? 'rgba(252, 196, 77, 0.3)' : 'rgba(172, 179, 186, 0.3)')};
   &:hover {
     border-bottom-color: rgba(252, 196, 77, 0.3);
   }
 `;
-export const ArticlesNavigation = () => {
+export const ArticlesNavigation = ({ navItems }: { navItems: string[] }) => {
+  const [navItem, setNavItem] = useState('Popular');
+
   return (
     <Container>
       <nav>
-        <NavItem to="/">
-          <NavText>Popular</NavText>
-        </NavItem>
-        <NavItem to="/">
-          <NavText>Top rated</NavText>
-        </NavItem>
-        <NavItem to="/">
-          <NavText>Comments</NavText>
-        </NavItem>
+        {navItems.map((nav) => (
+          <NavItem isActive={nav === navItem} to="" key={nav} onClick={() => setNavItem(nav)}>
+            <NavText isActive={nav === navItem}>{nav}</NavText>
+          </NavItem>
+        ))}
       </nav>
     </Container>
   );

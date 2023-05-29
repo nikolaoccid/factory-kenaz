@@ -49,19 +49,19 @@ export const SectionThreeNews = ({ color, title }: Props) => {
         </Header>
         <Body>
           <ThreeSectionArticle
-            goTo="/"
+            goTo="article"
             date="August 26, 2013"
             comments="14"
             title="For Obama, MLK's shadow looms large ahead of speech"
           />
           <ThreeSectionArticle
-            goTo="/"
+            goTo="article"
             date="August 26, 2013"
             comments="22"
             title="NASA releases portrait of a planet waving at Saturn"
           />
           <ThreeSectionArticle
-            goTo="/"
+            goTo="article"
             date="August 26, 2013"
             comments="5"
             title="Patriotsvv make cuts ... and Tim Tebow survives (so far)"

@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Bitter:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+
 #root {
-  display: flex;
+  overflow: hidden;
 }
 
 body {
@@ -10,3 +12,6 @@ body {
 p{
   margin: 0;
 }
+  .slick-track {display: flex !important}
+
+  .slick-slide {height: auto;}

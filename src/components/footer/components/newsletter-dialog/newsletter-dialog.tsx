@@ -40,7 +40,7 @@ const InputText = styled.input`
 `;
 const InputButton = styled.input`
   height: 51px;
-  width: 112px;
+  width: 100px;
   padding: 0;
   border: 0;
   font-family: 'Varela Round', sans-serif;

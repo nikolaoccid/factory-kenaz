@@ -1,5 +1,7 @@
 import styled from '@emotion/styled';
-import React from 'react';
+import { chunk } from 'lodash';
+import React, { useState } from 'react';
+
 const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -24,56 +26,44 @@ const TagRow = styled.div`
   flex-direction: row;
   gap: 5px;
 `;
-const Tag = styled.a`
-  background-color: #333333;
+const Tag = styled.div<{ isActive?: boolean }>`
+  background-color: ${(props) => (props.isActive ? '#4d4382' : '#333333')};
   padding: 3px 9px;
 
   text-decoration: none;
+  cursor: pointer;
   font-family: 'Varela', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
   line-height: 20px;
-  color: #666666;
+  color: ${(props) => (props.isActive ? '#cccccc' : '#666666')};
 `;
-const TagActive = styled.a`
-  background-color: #4d4382;
-  padding: 3px 7px;
 
-  text-decoration: none;
-  font-family: 'Varela', sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 20px;
-  color: #cccccc;
-`;
-export const TagsWidget = () => {
+export const TagsWidget = ({ tags }: { tags: string[] }) => {
+  const handleClick = (tag: string) => {
+    let activeTagsCopy = [...activeTags];
+    if (activeTags.includes(tag)) {
+      activeTagsCopy = activeTagsCopy.filter((activeTag) => activeTag != tag);
+      return setActiveTags(activeTagsCopy);
+    }
+    setActiveTags([...activeTags, tag]);
+  };
+  const groupedTags = chunk(tags, 4);
+  const [activeTags, setActiveTags] = useState<string[]>([]);
   return (
     <Container>
       <Title>Tags Widget</Title>
       <TagsGroup>
-        <TagRow>
-          <Tag href="">assueverit</Tag>
-          <Tag href="">utroquoe</Tag>
-          <Tag href="">probo</Tag>
-          <Tag href="">assuev</Tag>
-        </TagRow>
-        <TagRow>
-          <Tag href="">probo</Tag>
-          <Tag href="">assueverit</Tag>
-          <Tag href="">titl</Tag>
-          <TagActive href="">assueverit</TagActive>
-        </TagRow>
-        <TagRow>
-          <Tag href="">assueverit</Tag>
-          <Tag href="">utroque</Tag>
-          <Tag href="">probo</Tag>
-          <Tag href="">assueverit</Tag>
-        </TagRow>
-        <TagRow>
-          <Tag href="">utroque</Tag>
-        </TagRow>
+        {groupedTags.map((group) => (
+          <TagRow key={group[0]}>
+            {group.map((tag) => (
+              <Tag isActive={activeTags.includes(tag)} key={tag} onClick={() => handleClick(tag)}>
+                {tag}
+              </Tag>
+            ))}
+          </TagRow>
+        ))}
       </TagsGroup>
     </Container>
   );

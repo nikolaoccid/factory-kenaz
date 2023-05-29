@@ -35,7 +35,23 @@ export const Footer = () => {
         <RowContent>
           <SocialMediaDialog />
           <NewsletterDialog />
-          <TagsWidget />
+          <TagsWidget
+            tags={[
+              'news',
+              'business',
+              'travel',
+              'health',
+              'fitness',
+              'body',
+              'sport',
+              'life',
+              'tech',
+              'popular',
+              'nasa',
+              'president',
+              'military',
+            ]}
+          />
         </RowContent>
         <RowContent>
           <Featured title="Featured" />

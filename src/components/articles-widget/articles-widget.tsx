@@ -13,7 +13,7 @@ const Container = styled.div`
 export const ArticlesWidget = () => {
   return (
     <Container>
-      <ArticlesNavigation />
+      <ArticlesNavigation navItems={['Popular', 'Top rated', 'Comments']} />
       <SideWidgetArticle title="Palestinians call off peace talks after clash" date="August 26, 2013" goTo="/" />
       <SideWidgetArticle title="Palestinians call off peace talks after clash" date="August 26, 2013" goTo="/" />
       <SideWidgetArticle title="Palestinians call off peace talks after clash" date="August 26, 2013" goTo="/" />
