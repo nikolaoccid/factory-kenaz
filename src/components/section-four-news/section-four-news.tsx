@@ -55,24 +55,24 @@ export const SectionFourNews = ({ color, title }: Props) => {
         <Body>
           <Row>
             <FourSectionArticle
-              goTo="/"
+              goTo="article"
               date="August 26, 2013"
               title="For Obama, MLK's shadow looms large ahead of speech"
             />
             <FourSectionArticle
-              goTo="/"
+              goTo="article"
               date="August 26, 2013"
               title="For Obama, MLK's shadow looms large ahead of speech"
             />
           </Row>
           <Row>
             <FourSectionArticle
-              goTo="/"
+              goTo="article"
               date="August 26, 2013"
               title="For Obama, MLK's shadow looms large ahead of speech"
             />
             <FourSectionArticle
-              goTo="/"
+              goTo="article"
               date="August 26, 2013"
               title="Patriotsvv make cuts ... and Tim Tebow survives (so far)"
             />

@@ -39,24 +39,11 @@ export const ArticlesNavigation = ({ navItems }: { navItems: string[] }) => {
     <Container>
       <nav>
         {navItems.map((nav) => (
-          <NavItem isActive={nav === navItem} to="/" key={nav} onClick={() => setNavItem(nav)}>
+          <NavItem isActive={nav === navItem} to="" key={nav} onClick={() => setNavItem(nav)}>
             <NavText isActive={nav === navItem}>{nav}</NavText>
           </NavItem>
         ))}
       </nav>
     </Container>
-    // <Container>
-    //   <nav>
-    //     <NavItem to="/">
-    //       <NavText>Popular</NavText>
-    //     </NavItem>
-    //     <NavItem to="/">
-    //       <NavText>Top rated</NavText>
-    //     </NavItem>
-    //     <NavItem to="/">
-    //       <NavText>Comments</NavText>
-    //     </NavItem>
-    //   </nav>
-    // </Container>
   );
 };

@@ -13,6 +13,7 @@ const Container = styled.div`
   background: #fff;
   padding-left: 30px;
   padding-bottom: 30px;
+  padding-right: 30px;
   gap: 10px;
 `;
 const WidgetHeading = styled.h2`
@@ -84,6 +85,9 @@ export const ArticleCommentsWidget = () => {
         id: commentId + 1,
       },
     ]);
+    event.target.name.value = '';
+    event.target.email.value = '';
+    event.target.comment.value = '';
   };
   return (
     <OuterContainer>

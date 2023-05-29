@@ -51,7 +51,9 @@ const CommentBody = styled.div`
 export const ArticleComment = ({ name, date, comment }: Props) => {
   return (
     <Container>
-      <img src={anonUser} />
+      <div>
+        <img src={anonUser} alt="User avatar image" />
+      </div>
       <Comment>
         <CommentDetails>
           <Name>{name}</Name>
