@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 interface Props {
   text: string;
   linkTo: string;
+  state: object;
 }
 const Container = styled(Link)`
   cursor: grab;
@@ -20,6 +21,10 @@ const Container = styled(Link)`
     background-color: #423c70;
   }
 `;
-export const ArticleCtaButton = ({ text, linkTo }: Props) => {
-  return <Container to={linkTo}>{text}</Container>;
+export const ArticleCtaButton = ({ text, linkTo, state }: Props) => {
+  return (
+    <Container to={linkTo} state={state}>
+      {text}
+    </Container>
+  );
 };
