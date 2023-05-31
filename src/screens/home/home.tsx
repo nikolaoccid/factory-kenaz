@@ -47,7 +47,7 @@ export const Home = () => {
       <Header />
       <MainNavbar />
       <Banner940120 />
-      <HeaderSlider />
+      {/*<HeaderSlider />*/}
       <InnerContainer>
         <Body>
           <SectionThreeNews color="#299ec3" title="news" />
