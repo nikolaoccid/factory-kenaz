@@ -9,6 +9,7 @@ import { Link } from 'react-router-dom';
 
 import articleAuthor from '/article-author.png';
 import articleImageBody from '/article-book.png';
+import articleHero from '/article-hero.png';
 import articleImage from '/article-image-mountain.png';
 const Container = styled(Link)`
   cursor: grab;
@@ -50,7 +51,9 @@ export const FourSectionArticle = ({ title, date, goTo }: Props) => {
       to={goTo}
       state={{
         title: title,
+        date: date,
         bodyImage: articleImageBody,
+        heroImage: articleHero,
         firstParagraph:
           'Vestibulum id ligula porta felis euismod semper. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Aenean lacinia bibendum nulla sed consectetur. Sed posuere consectetur est at lobortis. Donec sed odio dui. Aenean lacinia bibendum nulla sed consectetur. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec sed odio dui. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Curabitur blandit tempus porttitor. Nulla vitae elit libero, a pharetra augue. Nullam quis risus eget urna mollis ornare vel eu leo.',
         secondParagraph:

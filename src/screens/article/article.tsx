@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 import React from 'react';
 import { useLocation } from 'react-router-dom';
+import Slider from 'react-slick';
 
 import { ArticleCommentsWidget } from '../../components/article-comments-widget/article-comments-widget';
 import { ArticlesWidget } from '../../components/articles-widget/articles-widget';
@@ -54,22 +55,68 @@ const BodyParagraph = styled.p`
   color: #444444;
   padding: 37px 20px 42px 30px;
 `;
+const HeroText = styled.div`
+  max-width: 940px;
+  margin-top: -200px;
+  padding-bottom: 35px;
+  position: relative;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.75),
+    rgba(255, 255, 255, 1)
+  );
+`;
+const DateText = styled.p`
+  font-family: 'Varela Round';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #222222;
+  padding-bottom: 50px;
+  width: 85%;
+  padding-left: 30px;
+`;
+const TitleText = styled.p`
+  font-family: 'Bitter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 53px;
+  color: #222222;
+  width: 85%;
+  padding-left: 30px;
+`;
+const SliderBody = styled.div`
+  position: relative;
+`;
 export const Article = () => {
   const { state } = useLocation();
   if (!state) {
     return null;
   }
+
   return (
     <Container>
       <Header />
       <MainNavbar />
       <Banner940120 />
+      <div>
+        <Slider>
+          <SliderBody>
+            <img src={state.heroImage} />
+            <HeroText>
+              <DateText>{state.date}</DateText>
+              <TitleText>{state.title}</TitleText>
+            </HeroText>
+          </SliderBody>
+        </Slider>
+      </div>
       <InnerContainer>
         <Body>
           <InnerBody>
-            <div>
-              TODO: <h2>{state.title}</h2>
-            </div>
             <BodyParagraph>{state.firstParagraph}</BodyParagraph>
             <img src={state.bodyImage} alt="Article body image" />
             <BodyParagraph>{state.secondParagraph}</BodyParagraph>

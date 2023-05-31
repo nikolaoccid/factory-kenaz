@@ -1,3 +1,6 @@
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+
 import styled from '@emotion/styled';
 import React, { Component } from 'react';
 import Slider from 'react-slick';
@@ -7,7 +10,7 @@ import articleBgImg from './assets/carousel-bg.png';
 const Container = styled(Slider)`
   max-width: 100vw;
   width: 940px;
-  overflow: hidden;
+  //overflow: hidden;
 `;
 const Image = styled.img`
   width: 150px;
