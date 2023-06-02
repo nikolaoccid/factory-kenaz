@@ -2,6 +2,8 @@ import styled from '@emotion/styled';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
+import { blockProps } from '../../../../utils/block-props';
+
 const Container = styled.div`
   background-color: rgb(59, 54, 99);
   display: flex;
@@ -10,7 +12,7 @@ const Container = styled.div`
   justify-content: center;
   height: 53px;
 `;
-const NavItem = styled(Link)<{ isActive: boolean }>`
+const NavItem = styled(Link, blockProps('isActive'))<{ isActive: boolean }>`
   cursor: grab;
   font-family: 'Varela Round', sans-serif;
   font-style: normal;

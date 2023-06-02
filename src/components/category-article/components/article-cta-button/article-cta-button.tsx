@@ -1,6 +1,8 @@
 import styled from '@emotion/styled';
 import React from 'react';
 import { Link } from 'react-router-dom';
+
+import { articleNameDashes } from '../../../../utils/article-name-dashes';
 interface Props {
   text: string;
   linkTo: string;

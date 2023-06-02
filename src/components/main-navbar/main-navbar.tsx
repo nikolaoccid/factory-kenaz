@@ -1,7 +1,8 @@
 import styled from '@emotion/styled';
-import React from 'react';
+import React, { isValidElement } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
+import { blockProps } from '../../utils/block-props';
 import { getPath } from '../../utils/get-path';
 const Container = styled.div`
   display: flex;
@@ -16,7 +17,10 @@ const Navigation = styled.nav`
   align-items: center;
   height: 53px;
 `;
-const NavItem = styled(Link)<{ bordercolor: string; isActive: boolean }>`
+const NavItem = styled(Link, blockProps('borderColor', 'isActive'))<{
+  borderColor: string;
+  isActive: boolean;
+}>`
   font-family: 'Bitter', serif;
   font-style: normal;
   font-weight: 700;
@@ -28,29 +32,29 @@ const NavItem = styled(Link)<{ bordercolor: string; isActive: boolean }>`
   padding: 14px 15px;
   border-bottom-width: 3px;
   border-bottom-style: solid;
-  border-bottom-color: ${(props) => props.bordercolor};
-  background-color: ${(props) => (props.isActive ? props.bordercolor : '')};
+  border-bottom-color: ${(props) => props.borderColor};
+  background-color: ${(props) => (props.isActive ? props.borderColor : '')};
   &:hover {
-    background-color: ${(props) => props.bordercolor};
+    background-color: ${(props) => props.borderColor};
   }
 `;
 const navItems = [
-  { name: 'News', route: '/news', bordercolor: '#299EC3' },
-  { name: 'Business', route: '/business', bordercolor: '#EE6151' },
-  { name: 'Sport', route: '/sport', bordercolor: '#84C14F' },
-  { name: 'Life', route: '/life', bordercolor: '#5DCFF3' },
-  { name: 'Tech', route: '/tech', bordercolor: '#FCC44D' },
-  { name: 'Travel', route: '/travel', bordercolor: '#A99765' },
+  { name: 'News', route: '/news', borderColor: '#299EC3' },
+  { name: 'Business', route: '/business', borderColor: '#EE6151' },
+  { name: 'Sport', route: '/sport', borderColor: '#84C14F' },
+  { name: 'Life', route: '/life', borderColor: '#5DCFF3' },
+  { name: 'Tech', route: '/tech', borderColor: '#FCC44D' },
+  { name: 'Travel', route: '/travel', borderColor: '#A99765' },
 ];
 export const MainNavbar = () => {
   return (
     <Container>
       <Navigation>
-        {navItems.map(({ route, name, bordercolor }) => (
+        {navItems.map(({ route, name, borderColor }) => (
           <NavItem
             key={route}
             to={route}
-            bordercolor={bordercolor}
+            borderColor={borderColor}
             isActive={getPath().toLowerCase() === name.toLowerCase()}
           >
             {name}

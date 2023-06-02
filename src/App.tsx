@@ -5,10 +5,12 @@ import HeaderSlider from './components/header-slider/header-slider';
 import { Article } from './screens/article/article';
 import { Category } from './screens/category/category';
 import { Home } from './screens/home/home';
+import ScrollToTop from './utils/scroll-to-top';
 
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route index element={<Home />} />
@@ -18,9 +20,9 @@ function App() {
         <Route path="life" element={<Category />} />
         <Route path="tech" element={<Category />} />
         <Route path="travel" element={<Category />} />
-        <Route path="article" element={<Article />} />
+        <Route path="article/:article" element={<Article />} />
         <Route path="react-slick" element={<HeaderSlider />} />
-        {/*<Route path="*" element={<NoPage />} />*/}
+        <Route path="*" element={<Home />} />
       </Routes>
     </BrowserRouter>
   );

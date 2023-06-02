@@ -1,6 +1,11 @@
 import styled from '@emotion/styled';
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+
+import { blockProps } from '../../../../utils/block-props';
+interface Props {
+  pages: number;
+}
 const Container = styled.div`
   display: flex;
   flex-direction: row;
@@ -8,7 +13,7 @@ const Container = styled.div`
 
   padding: 30px 0 20px 30px;
 `;
-const PaginationItem = styled(Link)`
+const PaginationItem = styled(Link, blockProps('isActive'))<{ isActive: boolean }>`
   cursor: grab;
   text-decoration: none;
   font-family: 'Varela Round';
@@ -17,8 +22,8 @@ const PaginationItem = styled(Link)`
   font-size: 14px;
   line-height: 17px;
 
-  background-color: #dddddd;
-  color: #4d4382;
+  background-color: ${(props) => (props.isActive ? '#4d4382' : '#dddddd')};
+  color: ${(props) => (props.isActive ? '#ffffff' : '#4d4382')};
   padding: 8px 12px;
 
   &:hover {
@@ -26,19 +31,22 @@ const PaginationItem = styled(Link)`
     background-color: #4d4382;
   }
 `;
-export const Pagination = () => {
+export const Pagination = ({ pages }: Props) => {
+  const [currentPage, setCurrentPage] = useState(1);
+  const pagesArray = [...Array(pages)];
+
   return (
     <Container>
-      <PaginationItem to="/">1</PaginationItem>
-      <PaginationItem to="/">2</PaginationItem>
-      <PaginationItem to="/">3</PaginationItem>
-      <PaginationItem to="/">4</PaginationItem>
-      <PaginationItem to="/">5</PaginationItem>
-      <PaginationItem to="/">6</PaginationItem>
-      <PaginationItem to="/">7</PaginationItem>
-      <PaginationItem to="/">8</PaginationItem>
-      <PaginationItem to="/">9</PaginationItem>
-      <PaginationItem to="/">10</PaginationItem>
+      {pagesArray.map((value, index) => (
+        <PaginationItem
+          key={index}
+          to=""
+          onClick={() => setCurrentPage(index + 1)}
+          isActive={currentPage === index + 1}
+        >
+          {index + 1}
+        </PaginationItem>
+      ))}
     </Container>
   );
 };

@@ -7,6 +7,7 @@ import articleImageBody from '/article-book.png';
 import articleHero from '/article-hero.png';
 import articleImage from '/article-image-mountain.png';
 
+import { articleNameDashes } from '../../utils/article-name-dashes';
 import articleImg from './assets/article-image.png';
 import calendarImg from './assets/calendar.png';
 import { ArticleCtaButton } from './components/article-cta-button/article-cta-button';
@@ -86,10 +87,25 @@ const ArticleImage = styled.img`
 `;
 const BodyTextContainer = styled.div``;
 export const CategoryArticle = ({ author, comments, date, title, bodyText, linkTo }: Props) => {
+  const state = {
+    title: title,
+    date: date,
+    bodyImage: articleImageBody,
+    heroImage: articleHero,
+    firstParagraph:
+      'Vestibulum id ligula porta felis euismod semper. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Aenean lacinia bibendum nulla sed consectetur. Sed posuere consectetur est at lobortis. Donec sed odio dui. Aenean lacinia bibendum nulla sed consectetur. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec sed odio dui. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Curabitur blandit tempus porttitor. Nulla vitae elit libero, a pharetra augue. Nullam quis risus eget urna mollis ornare vel eu leo.',
+    secondParagraph:
+      'Molestias ultricies, ante quam urna ut volutpat, egestas dolor dui, nec hac ultrices nulla non netus. Placerat vehicula donec non suscipit egestas, augue vel suspendisse. Et felis venenatis blandit sed est ultrices, adipiscing urna, at aliquam nullam facilisis aliquet sapien, eget duis consectetuer tristique nunc vitae erat, mi purus nisl lorem. Ac magna lobortis non, vulputate vitae viverra. Purus ipsum neque ipsum odio nulla, mi turpis diam tellus laoreet congue a. Rhoncus maecenas, sit suspendisse, condimentum purus convallis dui hendrerit. Purus ipsum neque ipsum odio nulla, mi turpis diam tellus laoreet congue.',
+    authorImage: articleAuthor,
+    authorDescription:
+      'Molestias ultricies, ante quam urna ut volutpat, egestas dolor dui, nec hac ultrices nulla non netus. Placerat vehicula donec non suscipit egestas, augue vel suspendisse. Et felis venenatis blandit sed est ultrices, adipiscing urna, at aliquam nullam facilisis aliquet sapien, eget duis consectetuer tristique nunc vitae erat, mi purus nisl lorem.',
+  };
   return (
     <Container>
       <TitleSection>
-        <Title to={linkTo}>{title}</Title>
+        <Title to={`${linkTo}/${articleNameDashes(title)}`} state={state}>
+          {title}
+        </Title>
         <MetadataSection>
           <DateSection>
             <img src={calendarImg} />
@@ -103,23 +119,7 @@ export const CategoryArticle = ({ author, comments, date, title, bodyText, linkT
         <ArticleImage src={articleImg} />
         <BodyTextContainer>
           <BodyText>{bodyText}</BodyText>
-          <ArticleCtaButton
-            text="Read article"
-            linkTo={linkTo}
-            state={{
-              title: title,
-              date: date,
-              bodyImage: articleImageBody,
-              heroImage: articleHero,
-              firstParagraph:
-                'Vestibulum id ligula porta felis euismod semper. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Aenean lacinia bibendum nulla sed consectetur. Sed posuere consectetur est at lobortis. Donec sed odio dui. Aenean lacinia bibendum nulla sed consectetur. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec sed odio dui. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Curabitur blandit tempus porttitor. Nulla vitae elit libero, a pharetra augue. Nullam quis risus eget urna mollis ornare vel eu leo.',
-              secondParagraph:
-                'Molestias ultricies, ante quam urna ut volutpat, egestas dolor dui, nec hac ultrices nulla non netus. Placerat vehicula donec non suscipit egestas, augue vel suspendisse. Et felis venenatis blandit sed est ultrices, adipiscing urna, at aliquam nullam facilisis aliquet sapien, eget duis consectetuer tristique nunc vitae erat, mi purus nisl lorem. Ac magna lobortis non, vulputate vitae viverra. Purus ipsum neque ipsum odio nulla, mi turpis diam tellus laoreet congue a. Rhoncus maecenas, sit suspendisse, condimentum purus convallis dui hendrerit. Purus ipsum neque ipsum odio nulla, mi turpis diam tellus laoreet congue.',
-              authorImage: articleAuthor,
-              authorDescription:
-                'Molestias ultricies, ante quam urna ut volutpat, egestas dolor dui, nec hac ultrices nulla non netus. Placerat vehicula donec non suscipit egestas, augue vel suspendisse. Et felis venenatis blandit sed est ultrices, adipiscing urna, at aliquam nullam facilisis aliquet sapien, eget duis consectetuer tristique nunc vitae erat, mi purus nisl lorem.',
-            }}
-          />
+          <ArticleCtaButton text="Read article" linkTo={`${linkTo}/${articleNameDashes(title)}`} state={state} />
         </BodyTextContainer>
       </ArticleBodySection>
     </Container>

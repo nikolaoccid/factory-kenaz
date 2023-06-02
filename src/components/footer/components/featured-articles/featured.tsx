@@ -21,12 +21,12 @@ export const Featured = ({ title }: Props) => {
   return (
     <Container>
       <Title>{title}</Title>
-      <FeaturedArticle title="Palestinians call off peace talks after clash" date="August 26, 2013" goTo="/" />
-      <FeaturedArticle title="Palestinians call off peace talks after clash" date="August 26, 2013" goTo="/" />
+      <FeaturedArticle title="Palestinians call off peace talks after clash" date="August 26, 2013" goTo="/article" />
+      <FeaturedArticle title="Palestinians call off peace talks after clash" date="August 26, 2013" goTo="/article" />
       <FeaturedArticle
         title="Palestinians call off peace talks after clash"
         date="August 26, 2013"
-        goTo="/"
+        goTo="/article"
         divider="hidden"
       />
     </Container>

@@ -12,6 +12,8 @@ import articleAuthor from '/article-author.png';
 import articleImageBody from '/article-book.png';
 import articleHero from '/article-hero.png';
 import articleImage from '/article-image-mountain.png';
+
+import { articleNameDashes } from '../../../../../utils/article-name-dashes';
 const Container = styled(Link)`
   cursor: grab;
   display: flex;
@@ -44,7 +46,7 @@ const ArticleMetaData = styled.div`
 export const ThreeSectionArticle = ({ title, date, comments, goTo }: Props) => {
   return (
     <Container
-      to={goTo}
+      to={`${goTo}/${articleNameDashes(title)}`}
       state={{
         title: title,
         date: date,
