@@ -67,6 +67,7 @@ const CommentsCounter = styled.p`
   font-size: 10px;
   line-height: 12px;
   color: #acb3ba;
+  padding-top: 4px;
 `;
 const Row = styled.div`
   display: flex;

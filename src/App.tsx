@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-import HeaderSlider from './components/header-slider/header-slider';
+import { HeaderSlider } from './components/header-slider/header-slider';
 import { Article } from './screens/article/article';
 import { Category } from './screens/category/category';
 import { Home } from './screens/home/home';
