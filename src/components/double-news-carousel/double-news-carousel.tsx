@@ -86,6 +86,7 @@ export const DoubleNewsCarousel = ({ color, title }: Props) => {
             </div>
             <div>
               <CarouselArticle
+                mode="double"
                 goTo="article"
                 date="August 26, 2013"
                 title="For Obama, MLK's shadow looms large ahead of speech"
