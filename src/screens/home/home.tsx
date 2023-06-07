@@ -6,12 +6,14 @@ import { Banner620120 } from '../../components/banner-620-120/banner-620-120';
 import { Banner940120 } from '../../components/banner-940-120/banner-940-120';
 import { Divider } from '../../components/divider/divider';
 import { DoubleBanner300250 } from '../../components/double-banner-300-250/double-banner-300-250';
+import { DoubleNewsCarousel } from '../../components/double-news-carousel/double-news-carousel';
 import { Footer } from '../../components/footer/footer';
 import { Header } from '../../components/header/header';
 import { HeaderSlider } from '../../components/header-slider/header-slider';
 import { MainNavbar } from '../../components/main-navbar/main-navbar';
 import { SectionFourNews } from '../../components/section-four-news/section-four-news';
 import { SectionThreeNews } from '../../components/section-three-news/section-three-news';
+import { SingleNewsCarousel } from '../../components/single-news-carousel/single-news-carousel';
 import { SocialDialog } from '../../components/social-dialog/social-dialog';
 const Container = styled.div`
   display: flex;
@@ -41,6 +43,11 @@ const SideBar = styled.div`
   width: 318px;
   gap: 25px;
 `;
+const RowContent = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 17px;
+`;
 export const Home = () => {
   return (
     <Container>
@@ -55,6 +62,11 @@ export const Home = () => {
           <Banner620120 />
           <SectionFourNews color="#EE6151" title="business" />
           <Banner620120 />
+          <DoubleNewsCarousel color="#FCC44D" title="News Carousel" />
+          <RowContent>
+            <SingleNewsCarousel color="#A99765" title="Editorial" />
+            <SingleNewsCarousel color="#A99765" title="Local news" />
+          </RowContent>
         </Body>
         <SideBar>
           <ArticlesWidget />
@@ -62,6 +74,7 @@ export const Home = () => {
           <DoubleBanner300250 />
         </SideBar>
       </InnerContainer>
+      <Banner940120 />
       <Divider />
       <Footer />
     </Container>

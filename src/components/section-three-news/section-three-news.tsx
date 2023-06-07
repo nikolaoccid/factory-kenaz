@@ -10,7 +10,7 @@ interface Props {
   title: string;
 }
 
-export const SectionThreeNews = ({ color, title }: Props) => {
+export const SectionThreeNews = ({ color = '#fff', title = 'Business' }: Props) => {
   return (
     <Container shadowColor={color}>
       <InnerContainer>
