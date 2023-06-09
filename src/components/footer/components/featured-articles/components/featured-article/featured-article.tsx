@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 import articleAuthor from '/article-author.png';
 import articleImageBody from '/article-book.png';
 import articleHero from '/article-hero.png';
-import articleMountainImage from '/article-image-mountain.png';
 interface Props {
   title: string;
   date: string;

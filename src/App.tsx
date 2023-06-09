@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-import { DoubleNewsCarousel } from './components/double-news-carousel/double-news-carousel';
 import { Gallery } from './components/gallery/gallery';
 import { Article } from './screens/article/article';
 import { Category } from './screens/category/category';

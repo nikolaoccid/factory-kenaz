@@ -17,17 +17,29 @@ import gallery08 from '/gallery08.png';
 import { LeftArrow } from '../header-slider/components/left-arrow/left-arrow';
 import { RightArrow } from '../header-slider/components/right-arrow/right-arrow';
 const Container = styled.div`
-  max-width: 100vw;
+  //max-width: 100vw;
   width: 940px;
 `;
 const ThumbnailImage = styled.img`
   width: 120px;
   height: 120px;
+  //margin-left: 10px;
 `;
-const Slide = styled.div`
+const MainGallery = styled(Slider)`
+  max-width: 940px;
+`;
+const NavSlider = styled(Slider)`
   position: relative;
+  top: -140px;
+  left: 20px;
+  width: 1140px;
+  .slick-current {
+    display: none;
+  }
+  .slick-track {
+    margin: 0;
+  }
 `;
-const NavSlider = styled(Slider)``;
 export const Gallery = () => {
   const [nav1, setNav1] = useState<any>(null);
   const [nav2, setNav2] = useState<any>(null);
@@ -59,65 +71,65 @@ export const Gallery = () => {
   });
 
   return (
-    <>
+    <Container>
       <>
-        <Slider {...settingsMain} asNavFor={nav2} ref={(slider) => setSlider1(slider)}>
-          <Slide>
+        <MainGallery {...settingsMain} asNavFor={nav2} ref={(slider) => setSlider1(slider)}>
+          <div>
             <img src={gallery01} alt="Gallery image" />
-          </Slide>
+          </div>
 
-          <Slide>
+          <div>
             <img src={gallery02} alt="Gallery image" />
-          </Slide>
-          <Slide>
+          </div>
+          <div>
             <img src={gallery03} alt="Gallery image" />
-          </Slide>
-          <Slide>
+          </div>
+          <div>
             <img src={gallery04} alt="Gallery image" />
-          </Slide>
-          <Slide>
+          </div>
+          <div>
             <img src={gallery05} alt="Gallery image" />
-          </Slide>
-          <Slide>
+          </div>
+          <div>
             <img src={gallery06} alt="Gallery image" />
-          </Slide>
-          <Slide>
+          </div>
+          <div>
             <img src={gallery07} alt="Gallery image" />
-          </Slide>
-          <Slide>
+          </div>
+          <div>
             <img src={gallery08} alt="Gallery image" />
-          </Slide>
-        </Slider>
+          </div>
+        </MainGallery>
       </>
       <>
         <NavSlider {...settingsThumbs} asNavFor={nav1} ref={(slider) => setSlider2(slider)}>
-          <Slide>
+          <div>
             <ThumbnailImage src={gallery01} alt="Gallery image" />
-          </Slide>
+          </div>
 
-          <Slide>
+          <div>
             <ThumbnailImage src={gallery02} alt="Gallery image" />
-          </Slide>
-          <Slide>
+          </div>
+          <div>
             <ThumbnailImage src={gallery03} alt="Gallery image" />
-          </Slide>
-          <Slide>
+          </div>
+          <div>
             <ThumbnailImage src={gallery04} alt="Gallery image" />
-          </Slide>
-          <Slide>
+          </div>
+          <div>
             <ThumbnailImage src={gallery05} alt="Gallery image" />
-          </Slide>
-          <Slide>
+          </div>
+          <div>
             <ThumbnailImage src={gallery06} alt="Gallery image" />
-          </Slide>
-          <Slide>
+          </div>
+          <div>
             <ThumbnailImage src={gallery07} alt="Gallery image" />
-          </Slide>
-          <Slide>
+          </div>
+          <div>
             <ThumbnailImage src={gallery08} alt="Gallery image" />
-          </Slide>
+          </div>
         </NavSlider>
       </>
-    </>
+    </Container>
   );
 };

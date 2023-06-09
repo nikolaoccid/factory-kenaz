@@ -76,7 +76,7 @@ export const Home = () => {
         </SideBar>
       </InnerContainer>
       <Banner940120 />
-      {/*<Gallery />*/}
+      <Gallery />
       <Divider />
       <Footer />
     </Container>
