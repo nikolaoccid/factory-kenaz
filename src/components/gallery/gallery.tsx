@@ -19,6 +19,7 @@ const images: string[] = [gallery01, gallery02, gallery03, gallery04, gallery05,
 import { LeftArrow } from '../header-slider/components/left-arrow/left-arrow';
 import { RightArrow } from '../header-slider/components/right-arrow/right-arrow';
 const Container = styled.div`
+  position: relative;
   width: 940px;
 `;
 const ThumbnailImage = styled.img`
@@ -47,7 +48,9 @@ const ToggleButton = styled.button`
   background: transparent;
 `;
 const FullScreenContainer = styled.div`
-  //position: relative;
+  position: absolute;
+  top: 30%;
+  left: 45%;
 `;
 const TogglerImg = styled.img`
   //position: absolute;
@@ -58,8 +61,7 @@ export const Gallery = () => {
   const [slider1, setSlider1] = useState<any>(null);
   const [slider2, setSlider2] = useState<any>(null);
   const [toggler, setToggler] = useState(false);
-  const [currentSlide, setCurrentSlide] = useState(1);
-  console.log('currentSlide', currentSlide);
+  const [currentSlide, setCurrentSlide] = useState(0);
   const settingsMain = {
     dots: false,
     slidesToShow: 1,
@@ -116,7 +118,7 @@ export const Gallery = () => {
           <ToggleButton onClick={() => setToggler(!toggler)}>
             <img src={magnifier} alt="Slider full screen icon" />
           </ToggleButton>
-          <FsLightbox toggler={toggler} sources={[`/gallery0${currentSlide + 1}.png`, ...images]} />
+          <FsLightbox toggler={toggler} sources={[`/gallery0${currentSlide + 1}.png`]} />
         </FullScreenContainer>
       </>
     </Container>
