@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import { DoubleNewsCarousel } from './components/double-news-carousel/double-news-carousel';
+import { Gallery } from './components/gallery/gallery';
 import { Article } from './screens/article/article';
 import { Category } from './screens/category/category';
 import { Home } from './screens/home/home';
@@ -21,7 +22,7 @@ function App() {
         <Route path="tech" element={<Category />} />
         <Route path="travel" element={<Category />} />
         <Route path="article/:article" element={<Article />} />
-        <Route path="slick-double" element={<DoubleNewsCarousel color="#FCC44D" title="News Carousel" />} />
+        <Route path="gallery" element={<Gallery />} />
         <Route path="*" element={<Home />} />
       </Routes>
     </BrowserRouter>

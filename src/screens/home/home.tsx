@@ -8,6 +8,7 @@ import { Divider } from '../../components/divider/divider';
 import { DoubleBanner300250 } from '../../components/double-banner-300-250/double-banner-300-250';
 import { DoubleNewsCarousel } from '../../components/double-news-carousel/double-news-carousel';
 import { Footer } from '../../components/footer/footer';
+import { Gallery } from '../../components/gallery/gallery';
 import { Header } from '../../components/header/header';
 import { HeaderSlider } from '../../components/header-slider/header-slider';
 import { MainNavbar } from '../../components/main-navbar/main-navbar';
@@ -75,6 +76,7 @@ export const Home = () => {
         </SideBar>
       </InnerContainer>
       <Banner940120 />
+      {/*<Gallery />*/}
       <Divider />
       <Footer />
     </Container>
