@@ -2,25 +2,33 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 import styled from '@emotion/styled';
-import FsLightbox from 'fslightbox-react';
+import ReactFsLightbox from 'fslightbox-react';
+
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+const FsLightbox = (ReactFsLightbox.default ? ReactFsLightbox.default : ReactFsLightbox) as typeof ReactFsLightbox;
+
 import React, { useEffect, useState } from 'react';
 import Slider from 'react-slick';
 
-import gallery01 from '/gallery01.png';
-import gallery02 from '/gallery02.png';
-import gallery03 from '/gallery03.png';
-import gallery04 from '/gallery04.png';
-import gallery05 from '/gallery05.png';
-import gallery06 from '/gallery06.png';
-import gallery07 from '/gallery07.png';
-import gallery08 from '/gallery08.png';
 import magnifier from '/magnifier.png';
-const images: string[] = [gallery01, gallery02, gallery03, gallery04, gallery05, gallery06, gallery07, gallery08];
+const images = [
+  { id: 1, src: '/gallery01.png' },
+  { id: 2, src: '/gallery02.png' },
+  { id: 3, src: '/gallery03.png' },
+  { id: 4, src: '/gallery04.png' },
+  { id: 5, src: '/gallery05.png' },
+  { id: 6, src: '/gallery06.png' },
+  { id: 7, src: '/gallery07.png' },
+  { id: 8, src: '/gallery08.png' },
+];
+
 import { LeftArrow } from '../header-slider/components/left-arrow/left-arrow';
 import { RightArrow } from '../header-slider/components/right-arrow/right-arrow';
 const Container = styled.div`
   position: relative;
   width: 940px;
+  height: 420px;
 `;
 const ThumbnailImage = styled.img`
   width: 120px;
@@ -50,7 +58,7 @@ const ToggleButton = styled.button`
 const FullScreenContainer = styled.div`
   position: absolute;
   top: 30%;
-  left: 45%;
+  left: 46%;
 `;
 const TogglerImg = styled.img`
   //position: absolute;
@@ -84,7 +92,7 @@ export const Gallery = () => {
   useEffect(() => {
     setNav1(slider1);
     setNav2(slider2);
-  });
+  }, [setNav1, setNav2, slider1, slider2]);
   return (
     <Container>
       <>
@@ -95,8 +103,8 @@ export const Gallery = () => {
           afterChange={setCurrentSlide}
         >
           {images.map((image) => (
-            <div key={image}>
-              <TogglerImg src={image} alt="Gallery image" />
+            <div key={image.id}>
+              <TogglerImg src={image.src} alt="Gallery image" />
             </div>
           ))}
         </MainGallery>
@@ -109,8 +117,8 @@ export const Gallery = () => {
           afterChange={setCurrentSlide}
         >
           {images.map((image) => (
-            <div key={image}>
-              <ThumbnailImage src={image} alt="Gallery image" />
+            <div key={image.id}>
+              <ThumbnailImage src={image.src} alt="Gallery image" />
             </div>
           ))}
         </NavSlider>
