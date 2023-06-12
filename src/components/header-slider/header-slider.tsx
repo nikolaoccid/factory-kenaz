@@ -114,6 +114,7 @@ export const HeaderSlider = () => {
               state={{
                 title: 'Palestinians call off peace talks after clash',
                 date: 'May 26th, 2023',
+                category: 'news',
                 bodyImage: articleImageBody,
                 heroImage: articleHero,
                 firstParagraph:
@@ -146,6 +147,7 @@ export const HeaderSlider = () => {
               state={{
                 title: "'Margot' breathlessly reimagines Anne Frank's sister",
                 date: 'May 26th, 2023',
+                category: 'news',
                 bodyImage: articleImageBody,
                 heroImage: articleHero,
                 firstParagraph:

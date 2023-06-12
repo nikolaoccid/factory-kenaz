@@ -52,6 +52,7 @@ export const CarouselArticle = ({ title, date, goTo, mode = 'single' }: Props) =
       state={{
         title: title,
         date: date,
+        category: 'life',
         bodyImage: articleImageBody,
         heroImage: articleHero,
         firstParagraph:

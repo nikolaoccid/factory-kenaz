@@ -87,6 +87,7 @@ export const SideWidgetArticle = ({ title, date, goTo, comments }: Props) => {
       state={{
         title: title,
         date: date,
+        category: 'sport',
         bodyImage: articleImageBody,
         heroImage: articleHero,
         firstParagraph:

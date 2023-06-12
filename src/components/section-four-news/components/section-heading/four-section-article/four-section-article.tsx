@@ -54,6 +54,7 @@ export const FourSectionArticle = ({ title, date, goTo }: Props) => {
       state={{
         title: title,
         date: date,
+        category: 'sport',
         bodyImage: articleImageBody,
         heroImage: articleHero,
         firstParagraph:

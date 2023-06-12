@@ -90,6 +90,7 @@ export const CategoryArticle = ({ author, comments, date, title, bodyText, linkT
   const state = {
     title: title,
     date: date,
+    category: 'travel',
     bodyImage: articleImageBody,
     heroImage: articleHero,
     firstParagraph:

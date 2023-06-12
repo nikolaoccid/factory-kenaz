@@ -65,6 +65,7 @@ export const FeaturedArticle = ({ title, date, goTo, divider = 'visible' }: Prop
         state={{
           title: title,
           date: date,
+          category: 'travel',
           bodyImage: articleImageBody,
           heroImage: articleHero,
           firstParagraph:

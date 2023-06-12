@@ -50,6 +50,7 @@ export const ThreeSectionArticle = ({ title, date, comments, goTo }: Props) => {
       state={{
         title: title,
         date: date,
+        category: 'business',
         bodyImage: articleImageBody,
         heroImage: articleHero,
         firstParagraph:

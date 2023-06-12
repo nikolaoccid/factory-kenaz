@@ -50,6 +50,7 @@ export const SingleNewsArticle = ({ title, date, comments, goTo }: Props) => {
       state={{
         title: title,
         date: date,
+        category: 'news',
         bodyImage: articleImageBody,
         heroImage: articleHero,
         firstParagraph:
