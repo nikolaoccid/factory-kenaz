@@ -11,7 +11,7 @@ import { Footer } from '../../components/footer/footer';
 import { Header } from '../../components/header/header';
 import { MainNavbar } from '../../components/main-navbar/main-navbar';
 import { SocialDialog } from '../../components/social-dialog/social-dialog';
-import { getPath } from '../../utils/get-path';
+import { getCategoryFromPath } from '../../utils/get-category-from-path';
 import { CategoryTitle } from './components/category-title/category-title';
 import { Pagination } from './components/pagination/pagination';
 const Container = styled.div`
@@ -54,7 +54,7 @@ export const Category = () => {
       <InnerContainer>
         <Body>
           <InnerBody>
-            <CategoryTitle text={getPath()} />
+            <CategoryTitle text={getCategoryFromPath()} />
             <CategoryArticle
               author="Matej Sudar"
               title="Patriotsvv make cuts ... and Tim Tebow survives (so far)"

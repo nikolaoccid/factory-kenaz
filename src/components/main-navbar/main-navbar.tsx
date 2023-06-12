@@ -1,9 +1,9 @@
 import styled from '@emotion/styled';
-import React, { isValidElement } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 import { blockProps } from '../../utils/block-props';
-import { getPath } from '../../utils/get-path';
+import { getCategoryFromPath } from '../../utils/get-category-from-path';
 const Container = styled.div`
   display: flex;
   width: 100%;
@@ -55,7 +55,7 @@ export const MainNavbar = () => {
             key={route}
             to={route}
             borderColor={borderColor}
-            isActive={getPath().toLowerCase() === name.toLowerCase()}
+            isActive={getCategoryFromPath().toLowerCase() === name.toLowerCase()}
           >
             {name}
           </NavItem>
