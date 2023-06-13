@@ -39,13 +39,11 @@ const ArticleTitle = styled.div`
 const ArticleMetaData = styled.div`
   display: flex;
   flex-direction: column;
-  width: 132px;
   gap: 5px;
   padding-top: 4px;
 `;
 const ArticleImageTag = styled.img`
-  width: 120px;
-  height: 90px;
+  width: 45%;
 `;
 export const FourSectionArticle = ({ title, date, goTo }: Props) => {
   return (

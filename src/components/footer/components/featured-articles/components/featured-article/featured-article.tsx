@@ -40,7 +40,7 @@ const ArticleTitle = styled.div`
 const ArticleMetaData = styled.div`
   display: flex;
   flex-direction: column;
-  width: 214px;
+  width: 45%;
   gap: 5px;
   padding-top: 4px;
 `;

@@ -10,7 +10,7 @@ const Container = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  height: 53px;
+  padding: 18px 0;
 `;
 const NavItem = styled(Link, blockProps('isActive'))<{ isActive: boolean }>`
   cursor: grab;

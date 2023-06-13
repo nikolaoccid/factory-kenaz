@@ -17,10 +17,9 @@ const Social = styled.a`
 `;
 const Text = styled.p`
   display: flex;
+  width: 50%;
   align-items: center;
-  padding-left: 16px;
-  width: 107px;
-  height: 40px;
+  padding: 10px 10px 10px 16px;
   background-color: #dddddd;
 
   font-family: 'Bitter', sans-serif;
@@ -32,11 +31,10 @@ const Text = styled.p`
 `;
 const Fans = styled.p`
   display: flex;
-  padding-left: 16px;
   align-items: center;
   background-color: #4d4382;
-  width: 122px;
-  height: 40px;
+  width: 50%;
+  padding: 12px 8px 14px 16px;
 
   font-family: 'Varela Round', sans-serif;
   font-style: normal;

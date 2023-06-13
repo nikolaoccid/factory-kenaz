@@ -1,4 +1,3 @@
-import styled from '@emotion/styled';
 import React from 'react';
 
 import { ArticlesWidget } from '../../components/articles-widget/articles-widget';
@@ -16,39 +15,8 @@ import { SectionFourNews } from '../../components/section-four-news/section-four
 import { SectionThreeNews } from '../../components/section-three-news/section-three-news';
 import { SingleNewsCarousel } from '../../components/single-news-carousel/single-news-carousel';
 import { SocialDialog } from '../../components/social-dialog/social-dialog';
-const Container = styled.div`
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  background-color: #eeeeee;
-  justify-content: center;
-  align-items: center;
-  max-width: 100%;
-`;
-const InnerContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  gap: 17px;
-  width: 940px;
-`;
-const Body = styled.div`
-  display: flex;
-  flex-direction: column;
-  background-color: rgb(237, 237, 237);
-  width: 622px;
-  gap: 17px;
-`;
-const SideBar = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 318px;
-  gap: 25px;
-`;
-const RowContent = styled.div`
-  display: flex;
-  flex-direction: row;
-  gap: 17px;
-`;
+import { Body, Container, InnerContainer, RowContent, SideBar } from '../page.css';
+
 export const Home = () => {
   return (
     <Container>

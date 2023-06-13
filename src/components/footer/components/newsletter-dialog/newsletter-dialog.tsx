@@ -22,13 +22,9 @@ const BodyText = styled.p`
   line-height: 20px;
   color: #666666;
 `;
-const Body = styled.div`
-  width: 303px;
-`;
 
 const InputText = styled.input`
-  height: 30px;
-  padding: 10px 15px;
+  padding: 16px 15px;
   border: 0;
   font-family: 'Varela Round', sans-serif;
   font-style: normal;
@@ -55,9 +51,9 @@ export const NewsletterDialog = () => {
   return (
     <Container>
       <Title>Newsletter</Title>
-      <Body>
+      <div>
         <BodyText>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus leo ante.</BodyText>
-      </Body>
+      </div>
       <form>
         <InputText type="text" id="email" name="email" placeholder="Your mail" />
         <InputButton type="submit" value="Subscribe" />

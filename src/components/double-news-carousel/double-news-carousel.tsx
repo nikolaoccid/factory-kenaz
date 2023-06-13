@@ -16,15 +16,12 @@ interface Props {
 }
 
 const Container = styled.div<{ shadowColor: string }>`
-  max-width: 610px;
+  max-width: 100%;
   background-color: #fff;
 
   border-left-width: 10px;
   border-left-style: solid;
   border-left-color: ${(props) => props.shadowColor};
-  .slick-current {
-    //padding-right: 15px;
-  }
 `;
 const InnerContainer = styled.div`
   padding-top: 15px;
@@ -35,10 +32,8 @@ const Header = styled.div`
   flex-direction: row;
   flex: 1;
   padding-left: 31px;
-  max-height: 35px;
   justify-content: space-between;
   align-items: center;
-  max-width: 550px;
 `;
 const Controls = styled.div`
   display: flex;

@@ -75,7 +75,7 @@ const BodyText = styled.div`
   font-size: 14px;
   line-height: 22px;
   color: #444444;
-  max-width: 384px;
+  padding-right: 18px;
   padding-bottom: 15px;
 `;
 const ArticleImage = styled.img`

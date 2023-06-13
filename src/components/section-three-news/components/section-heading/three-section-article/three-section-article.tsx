@@ -18,7 +18,7 @@ const Container = styled(Link)`
   cursor: grab;
   display: flex;
   flex-direction: column;
-  width: 170px;
+  width: 33%;
   text-decoration: none;
 `;
 const ArticleDate = styled.div`

@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 export const Container = styled.div<{ shadowColor: string }>`
   display: flex;
   flex-direction: column;
-  max-width: 610px;
+  max-width: 100%;
   background-color: #fff;
 
   border-left-width: 10px;
@@ -19,10 +19,8 @@ export const Header = styled.div`
   display: flex;
   flex-direction: row;
   flex: 1;
-  max-height: 35px;
   justify-content: space-between;
   align-items: center;
-  max-width: 550px;
 `;
 export const Body = styled.div`
   display: flex;

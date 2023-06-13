@@ -34,9 +34,6 @@ const BodyText = styled.p`
   line-height: 20px;
   color: #666666;
 `;
-const Body = styled.div`
-  width: 303px;
-`;
 const SocialMediaIcons = styled.div`
   display: flex;
   flex-direction: row;
@@ -49,9 +46,9 @@ export const SocialMediaDialog = () => {
         <img src={arrowImage} />
         <Title>Kenaz</Title>
       </TitleHeader>
-      <Body>
+      <div>
         <BodyText>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus leo ante.</BodyText>
-      </Body>
+      </div>
 
       <SocialMediaIcons>
         <a href="#">

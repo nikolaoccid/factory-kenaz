@@ -7,7 +7,6 @@ import { SideWidgetArticle } from './components/side-widget-article/side-widget-
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  max-width: 300px;
   background-color: rgb(75, 69, 126);
 `;
 export const ArticlesWidget = () => {

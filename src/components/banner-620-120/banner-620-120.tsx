@@ -5,8 +5,7 @@ const OuterContainer = styled.div`
 `;
 const Container = styled.div`
   display: flex;
-  width: 620px;
-  height: 120px;
+  width: 100%;
   background: #fff;
   border: 1px solid #d7d7d7;
 `;
@@ -15,6 +14,7 @@ const TextContainer = styled.div`
   flex: 1;
   justify-content: center;
   align-items: center;
+  padding: 50px 0;
 
   font-family: 'Varela Round', sans-serif;
   font-style: normal;

@@ -9,13 +9,11 @@ const Container = styled.div`
   width: 100%;
   justify-content: center;
   background-color: #4d4382;
-  height: 53px;
 `;
 const Navigation = styled.nav`
   width: 940px;
   display: flex;
   align-items: center;
-  height: 53px;
 `;
 const NavItem = styled(Link, blockProps('borderColor', 'isActive'))<{
   borderColor: string;

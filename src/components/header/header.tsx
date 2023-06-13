@@ -31,7 +31,6 @@ const InnerContainer = styled.div`
   justify-content: space-between;
 
   flex-direction: row;
-  height: 53px;
   width: 940px;
 `;
 export const Header = () => {

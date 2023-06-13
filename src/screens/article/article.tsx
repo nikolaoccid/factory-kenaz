@@ -14,35 +14,7 @@ import { Footer } from '../../components/footer/footer';
 import { Header } from '../../components/header/header';
 import { MainNavbar } from '../../components/main-navbar/main-navbar';
 import { SocialDialog } from '../../components/social-dialog/social-dialog';
-
-const Container = styled.div`
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  background-color: #eeeeee;
-  justify-content: center;
-  align-items: center;
-  max-width: 100%;
-`;
-const InnerContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  gap: 17px;
-  width: 940px;
-`;
-const Body = styled.div`
-  display: flex;
-  flex-direction: column;
-  background-color: rgb(237, 237, 237);
-  width: 622px;
-  gap: 17px;
-`;
-const SideBar = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 318px;
-  gap: 25px;
-`;
+import { Body, Container, InnerContainer, SideBar } from '../page.css';
 const InnerBody = styled.div`
   background-color: #ffffff;
 `;

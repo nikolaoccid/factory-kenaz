@@ -21,11 +21,6 @@ const Container = styled(Slider)`
   width: 940px;
   margin-bottom: 20px;
 `;
-const Image = styled.img`
-  width: 10px;
-  height: 10px;
-`;
-
 const DateText = styled.p`
   font-family: 'Varela Round';
   font-style: normal;

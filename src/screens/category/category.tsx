@@ -12,36 +12,10 @@ import { Header } from '../../components/header/header';
 import { MainNavbar } from '../../components/main-navbar/main-navbar';
 import { SocialDialog } from '../../components/social-dialog/social-dialog';
 import { getCategoryFromPath } from '../../utils/get-category-from-path';
+import { Body, Container, InnerContainer, SideBar } from '../page.css';
 import { CategoryTitle } from './components/category-title/category-title';
 import { Pagination } from './components/pagination/pagination';
-const Container = styled.div`
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  background-color: #eeeeee;
-  justify-content: center;
-  align-items: center;
-  max-width: 100%;
-`;
-const InnerContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  gap: 17px;
-  width: 940px;
-`;
-const Body = styled.div`
-  display: flex;
-  flex-direction: column;
-  background-color: rgb(237, 237, 237);
-  width: 622px;
-  gap: 17px;
-`;
-const SideBar = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 318px;
-  gap: 25px;
-`;
+
 const InnerBody = styled.div`
   background-color: #ffffff;
 `;
