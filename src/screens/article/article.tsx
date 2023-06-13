@@ -64,6 +64,9 @@ const TitleText = styled.p`
 const SliderBody = styled.div`
   position: relative;
 `;
+const BodyImage = styled.img`
+  width: 100%;
+`;
 export const Article = () => {
   const { state } = useLocation();
   if (!state) {
@@ -90,7 +93,7 @@ export const Article = () => {
         <Body>
           <InnerBody>
             <BodyParagraph>{state.firstParagraph}</BodyParagraph>
-            <img src={state.bodyImage} alt="Article body image" />
+            <BodyImage src={state.bodyImage} alt="Article body image" />
             <BodyParagraph>{state.secondParagraph}</BodyParagraph>
           </InnerBody>
           <Banner620120 />
