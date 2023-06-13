@@ -19,7 +19,7 @@ const Text = styled.p`
   display: flex;
   width: 50%;
   align-items: center;
-  padding: 10px 10px 10px 16px;
+  padding: 12px 10px 12px 16px;
   background-color: #dddddd;
 
   font-family: 'Bitter', sans-serif;

@@ -19,6 +19,7 @@ export const Body = styled.div`
   background-color: rgb(237, 237, 237);
   width: 65%;
   gap: 17px;
+  //padding-bottom: 20px;
 `;
 export const SideBar = styled.div`
   display: flex;

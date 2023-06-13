@@ -28,7 +28,7 @@ import { RightArrow } from '../header-slider/components/right-arrow/right-arrow'
 const Container = styled.div`
   position: relative;
   width: 940px;
-  height: 420px;
+  height: 400px;
 `;
 const ThumbnailImage = styled.img`
   width: 120px;
