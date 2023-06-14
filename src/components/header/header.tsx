@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import React from 'react';
 
 import { Navbar } from '../navbar/navbar';
-import { BackButton } from './components/back-button/back-button';
+import { Logo } from './components/logo-button/logo';
 
 const Container = styled.div`
   width: 100%;
@@ -38,7 +38,7 @@ export const Header = () => {
     <Container>
       <InnerContainer>
         <LeftContent>
-          <BackButton />
+          <Logo />
           <HeadingText>Kenaz</HeadingText>
         </LeftContent>
         <Navbar />

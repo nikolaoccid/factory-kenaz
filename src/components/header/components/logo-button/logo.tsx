@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import backArrowWhite from './assets/left-white-arrow.png';
+import logoWhite from './assets/left-white-arrow.png';
 
 const Container = styled.button`
   display: flex;
@@ -19,16 +19,16 @@ const Container = styled.button`
   cursor: pointer;
   outline: inherit;
 `;
-const ArrowImage = styled.img`
+const LogoImage = styled.img`
   width: 14px;
   height: 21px;
 `;
-export const BackButton = () => {
+export const Logo = () => {
   const navigate = useNavigate();
-  const goBack = () => navigate(-1);
+  const goHome = () => navigate('/');
   return (
-    <Container onClick={goBack}>
-      <ArrowImage src={backArrowWhite} alt="Back arrow white" />
+    <Container onClick={goHome}>
+      <LogoImage src={logoWhite} alt="Logo white" />
     </Container>
   );
 };
