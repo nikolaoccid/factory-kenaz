@@ -6,8 +6,8 @@ import React from 'react';
 import Slider from 'react-slick';
 
 import { CarouselArticle } from '../carousel-article/carousel-article';
-import { SectionHeading } from '../section-three-news/components/section-heading/section-heading';
-import { Body } from '../section-three-news/section-news.css';
+import { SectionHeading } from '../section-news/components/section-heading/section-heading';
+import { Body } from '../section-news/section-news.css';
 import { NextArrow } from './components/next-arrow/next-arrow';
 import { PrevArrow } from './components/prev-arrow/prev-arrow';
 interface Props {

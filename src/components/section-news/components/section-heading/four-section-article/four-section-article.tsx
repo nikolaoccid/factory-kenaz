@@ -3,9 +3,9 @@ import React from 'react';
 interface Props {
   title: string;
   date: string;
-  comments: string;
   goTo: string;
 }
+
 import { Link } from 'react-router-dom';
 
 import articleAuthor from '/article-author.png';
@@ -14,43 +14,31 @@ import articleHero from '/article-hero.png';
 import articleImage from '/article-image-mountain.png';
 
 import { articleNameDashes } from '../../../../../utils/article-name-dashes';
+import { ArticleDate, ArticleTitle } from '../section-article.css';
 const Container = styled(Link)`
-  cursor: grab;
+  cursor: pointer;
   display: flex;
-  flex-direction: column;
-  width: 33%;
+  flex-direction: row;
+  gap: 15px;
   text-decoration: none;
-`;
-const ArticleDate = styled.div`
-  font-family: 'Varela Round';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 14px;
-  color: #666666;
-`;
-const ArticleTitle = styled.div`
-  font-family: 'Bitter';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 18px;
-  color: #363f48;
 `;
 const ArticleMetaData = styled.div`
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding-top: 9px;
+  flex-direction: column;
+  gap: 5px;
+  padding-top: 4px;
 `;
-export const ThreeSectionArticle = ({ title, date, comments, goTo }: Props) => {
+const ArticleImageTag = styled.img`
+  width: 45%;
+`;
+export const FourSectionArticle = ({ title, date, goTo }: Props) => {
   return (
     <Container
       to={`${goTo}/${articleNameDashes(title)}`}
       state={{
         title: title,
         date: date,
-        category: 'business',
+        category: 'sport',
         bodyImage: articleImageBody,
         heroImage: articleHero,
         firstParagraph:
@@ -62,12 +50,11 @@ export const ThreeSectionArticle = ({ title, date, comments, goTo }: Props) => {
           'Molestias ultricies, ante quam urna ut volutpat, egestas dolor dui, nec hac ultrices nulla non netus. Placerat vehicula donec non suscipit egestas, augue vel suspendisse. Et felis venenatis blandit sed est ultrices, adipiscing urna, at aliquam nullam facilisis aliquet sapien, eget duis consectetuer tristique nunc vitae erat, mi purus nisl lorem.',
       }}
     >
-      <img src={articleImage} />
+      <ArticleImageTag src={articleImage} />
       <ArticleMetaData>
         <ArticleDate>{date}</ArticleDate>
-        <ArticleDate>{comments}</ArticleDate>
+        <ArticleTitle>{title}</ArticleTitle>
       </ArticleMetaData>
-      <ArticleTitle>{title}</ArticleTitle>
     </Container>
   );
 };

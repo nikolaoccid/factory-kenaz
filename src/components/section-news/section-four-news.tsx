@@ -1,9 +1,9 @@
 import React from 'react';
 
-import { Body, Container, Header, InnerContainer, Row } from '../section-three-news/section-news.css';
 import { FourSectionArticle } from './components/section-heading/four-section-article/four-section-article';
 import { SectionHeading } from './components/section-heading/section-heading';
 import { SectionLink } from './components/section-link/section-link';
+import { Body, Container, Header, InnerContainer, Row } from './section-news.css';
 
 interface Props {
   color: string;
