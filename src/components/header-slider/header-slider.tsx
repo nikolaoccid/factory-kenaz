@@ -8,7 +8,6 @@ import Slider from 'react-slick';
 
 import articleAuthor from '/article-author.png';
 import articleImageBody from '/article-book.png';
-import heroImage from '/article-hero.png';
 import articleHero from '/article-hero.png';
 import commentIcon from '/comment.png';
 

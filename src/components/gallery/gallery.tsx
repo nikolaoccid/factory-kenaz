@@ -20,7 +20,6 @@ const images = [
   { id: 5, src: '/gallery05.png' },
   { id: 6, src: '/gallery06.png' },
   { id: 7, src: '/gallery07.png' },
-  { id: 8, src: '/gallery08.png' },
 ];
 
 import { LeftArrow } from '../header-slider/components/left-arrow/left-arrow';
@@ -40,14 +39,7 @@ const MainGallery = styled(Slider)`
 const NavSlider = styled(Slider)`
   position: relative;
   top: -140px;
-  left: 20px;
-  width: 1140px;
-  .slick-current {
-    display: none;
-  }
-  .slick-track {
-    margin: 0;
-  }
+  left: 10px;
 `;
 const ToggleButton = styled.button`
   cursor: pointer;
@@ -59,9 +51,6 @@ const FullScreenContainer = styled.div`
   position: absolute;
   top: 30%;
   left: 46%;
-`;
-const TogglerImg = styled.img`
-  //position: absolute;
 `;
 export const Gallery = () => {
   const [nav1, setNav1] = useState<any>(null);
@@ -82,12 +71,13 @@ export const Gallery = () => {
   const settingsThumbs = {
     dots: false,
     arrows: false,
-    slidesToShow: 8,
+    slidesToShow: 7,
     slidesToScroll: 1,
     asNavFor: '.slider-for',
     centerMode: true,
     swipeToSlide: true,
     focusOnSelect: true,
+    centerPadding: '15px',
   };
   useEffect(() => {
     setNav1(slider1);
@@ -104,7 +94,7 @@ export const Gallery = () => {
         >
           {images.map((image) => (
             <div key={image.id}>
-              <TogglerImg src={image.src} alt="Gallery image" />
+              <img src={image.src} alt="Gallery image" />
             </div>
           ))}
         </MainGallery>

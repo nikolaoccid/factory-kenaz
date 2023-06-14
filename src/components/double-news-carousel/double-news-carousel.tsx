@@ -40,7 +40,20 @@ const Controls = styled.div`
   flex-direction: row;
   gap: 15px;
 `;
-
+const BodyCarousel = styled(Body)`
+  padding: 28px 0 28px 30px;
+`;
+const CarouselSlider = styled(Slider)`
+  //.slick-slide {
+  //  margin: 0 10px !important;
+  //}
+  //.slick-list {
+  //  margin: 0 -10px !important;
+  //}
+  //.slick-active {
+  //  margin: 0 0 0 -10px !important;
+  //}
+`;
 export const DoubleNewsCarousel = ({ color, title }: Props) => {
   const settings = {
     dots: false,
@@ -61,8 +74,8 @@ export const DoubleNewsCarousel = ({ color, title }: Props) => {
             <NextArrow onClick={() => sliderRef.current?.slickNext()} />
           </Controls>
         </Header>
-        <Body>
-          <Slider ref={sliderRef} {...settings}>
+        <BodyCarousel>
+          <CarouselSlider ref={sliderRef} {...settings}>
             <div>
               <CarouselArticle
                 goTo="article"
@@ -87,8 +100,8 @@ export const DoubleNewsCarousel = ({ color, title }: Props) => {
                 title="For Obama, MLK's shadow looms large ahead of speech"
               />
             </div>
-          </Slider>
-        </Body>
+          </CarouselSlider>
+        </BodyCarousel>
       </InnerContainer>
     </Container>
   );

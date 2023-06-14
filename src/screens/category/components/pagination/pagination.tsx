@@ -14,7 +14,7 @@ const Container = styled.div`
   padding: 30px 0 20px 30px;
 `;
 const PaginationItem = styled(Link, blockProps('isActive'))<{ isActive: boolean }>`
-  cursor: grab;
+  cursor: pointer;
   text-decoration: none;
   font-family: 'Varela Round';
   font-style: normal;

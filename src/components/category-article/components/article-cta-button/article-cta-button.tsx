@@ -9,7 +9,7 @@ interface Props {
   state: object;
 }
 const Container = styled(Link)`
-  cursor: grab;
+  cursor: pointer;
   font-family: 'Varela Round';
   font-style: normal;
   font-weight: 400;

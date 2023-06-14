@@ -15,7 +15,7 @@ interface Props {
 import { articleNameDashes } from '../../../../../../utils/article-name-dashes';
 import articleImage from './assets/article-image.png';
 const Container = styled(Link)`
-  cursor: grab;
+  cursor: pointer;
   display: flex;
   flex-direction: row;
   gap: 15px;

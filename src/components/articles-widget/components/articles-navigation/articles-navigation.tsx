@@ -13,7 +13,7 @@ const Container = styled.div`
   padding: 18px 0;
 `;
 const NavItem = styled(Link, blockProps('isActive'))<{ isActive: boolean }>`
-  cursor: grab;
+  cursor: pointer;
   font-family: 'Varela Round', sans-serif;
   font-style: normal;
   font-weight: 400;

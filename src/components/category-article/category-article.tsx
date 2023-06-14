@@ -35,7 +35,7 @@ const TitleSection = styled.div`
   gap: 9px;
 `;
 const Title = styled(Link)`
-  cursor: grab;
+  cursor: pointer;
   font-family: 'Bitter';
   font-style: normal;
   font-weight: 700;

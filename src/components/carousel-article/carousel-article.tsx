@@ -20,7 +20,7 @@ const Container = styled(Link)<{ mode: string }>`
   display: flex;
   flex-direction: column;
   text-decoration: none;
-  padding-left: ${(props) => (props.mode === 'double' ? '30px' : '0')};
+  padding-right: ${(props) => (props.mode === 'double' ? '30px' : '0')};
 `;
 const ArticleDate = styled.div`
   font-family: 'Varela Round';

@@ -16,7 +16,7 @@ import articleImage from '/article-image-mountain.png';
 import { articleNameDashes } from '../../../../utils/article-name-dashes';
 
 const Container = styled(Link)`
-  cursor: grab;
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   text-decoration: none;

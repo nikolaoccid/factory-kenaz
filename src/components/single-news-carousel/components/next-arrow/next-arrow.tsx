@@ -4,7 +4,7 @@ import arrow from '../../assets/right.png';
 
 export const NextArrow = ({ onClick }: any) => {
   return (
-    <div onClick={onClick}>
+    <div style={{ cursor: 'pointer' }} onClick={onClick}>
       <img src={arrow} />
     </div>
   );
