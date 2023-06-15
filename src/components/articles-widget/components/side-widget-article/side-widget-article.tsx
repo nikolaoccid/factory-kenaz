@@ -12,9 +12,9 @@ import articleAuthor from '/article-author.png';
 import articleImageBody from '/article-book.png';
 import articleHero from '/article-hero.png';
 import articleImage from '/article-image-mountain.png';
+import commentIcon from '/comment_.png';
 
 import { articleNameDashes } from '../../../../utils/article-name-dashes';
-import commentIcon from './assets/comment.png';
 const Container = styled(Link)`
   cursor: pointer;
   display: flex;

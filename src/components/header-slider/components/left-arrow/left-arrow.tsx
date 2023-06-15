@@ -1,6 +1,6 @@
 import React from 'react';
 
-import leftArrowIcon from '../../assets/left-arrow-icon.png';
+import leftArrowIcon from '/header-slider/left-arrow-icon.png';
 
 export const LeftArrow = ({ onClick }: any) => {
   return (

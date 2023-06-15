@@ -1,6 +1,6 @@
 import React from 'react';
 
-import arrow from './../../assets/left-yellow.png';
+import arrow from '/double-news-carousel/left-yellow.png';
 
 export const PrevArrow = ({ onClick }: any) => {
   return (

@@ -9,10 +9,10 @@ import Slider from 'react-slick';
 import articleAuthor from '/article-author.png';
 import articleImageBody from '/article-book.png';
 import articleHero from '/article-hero.png';
+import articleMountainImage from '/article-mountain-large.png';
 import commentIcon from '/comment.png';
 
 import { articleNameDashes } from '../../utils/article-name-dashes';
-import articleMountainImage from './assets/carousel-bg.png';
 import { LeftArrow } from './components/left-arrow/left-arrow';
 import { RightArrow } from './components/right-arrow/right-arrow';
 const Container = styled(Slider)`

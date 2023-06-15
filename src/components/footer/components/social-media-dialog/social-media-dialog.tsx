@@ -1,13 +1,13 @@
 import styled from '@emotion/styled';
 import React from 'react';
 
-import dribble from './assets/dribble-squared.png';
-import fb from './assets/Facebook-squared.png';
-import arrowImage from './assets/left-arrow-blue.png';
-import rss from './assets/Rss-squared.png';
-import skype from './assets/Skype-square.png';
-import twitter from './assets/twitter-squared.png';
-import youtube from './assets/Youtube-squared.png';
+import arrowImage from '/logo-blue.png';
+import dribble from '/social-media-dialog/dribble-squared.png';
+import fb from '/social-media-dialog/Facebook-squared.png';
+import rss from '/social-media-dialog/Rss-squared.png';
+import skype from '/social-media-dialog/Skype-square.png';
+import twitter from '/social-media-dialog/twitter-squared.png';
+import youtube from '/social-media-dialog/Youtube-squared.png';
 const Container = styled.div`
   display: flex;
   flex-direction: column;

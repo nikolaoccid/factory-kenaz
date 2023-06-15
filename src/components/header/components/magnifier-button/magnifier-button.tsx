@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import magnifier from './assets/magnifier.png';
+import magnifier from '/magnifier-large.png';
 
 const Container = styled.button`
   display: flex;

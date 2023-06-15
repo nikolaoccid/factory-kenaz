@@ -12,8 +12,9 @@ interface Props {
   divider?: 'hidden' | 'visible';
 }
 
+import articleImage from '/article-image-mountain.png';
+
 import { articleNameDashes } from '../../../../../../utils/article-name-dashes';
-import articleImage from './assets/article-image.png';
 const Container = styled(Link)`
   cursor: pointer;
   display: flex;

@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import logoWhite from './assets/left-white-arrow.png';
+import logoWhite from '/logo-white.png';
 
 const Container = styled.button`
   display: flex;

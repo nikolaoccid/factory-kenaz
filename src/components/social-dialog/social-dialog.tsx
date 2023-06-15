@@ -1,9 +1,9 @@
 import styled from '@emotion/styled';
 import React from 'react';
 
-import fb from './assets/Facebook-squared.png';
-import twitter from './assets/twitter-squared.png';
-import youtube from './assets/Youtube-squared.png';
+import fb from '/social-media-dialog/Facebook-squared.png';
+import twitter from '/social-media-dialog/twitter-squared.png';
+import youtube from '/social-media-dialog/Youtube-squared.png';
 const Container = styled.div`
   display: flex;
   flex-direction: column;

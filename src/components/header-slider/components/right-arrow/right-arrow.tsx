@@ -1,6 +1,6 @@
 import React from 'react';
 
-import rightArrowIcon from '../../assets/right-arrow-icon.png';
+import rightArrowIcon from '/header-slider/right-arrow-icon.png';
 export const RightArrow = ({ onClick }: any) => {
   return (
     <div style={{ position: 'relative', cursor: 'pointer' }} onClick={onClick}>

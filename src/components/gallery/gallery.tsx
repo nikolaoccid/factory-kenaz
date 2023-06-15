@@ -13,13 +13,13 @@ import Slider from 'react-slick';
 
 import magnifier from '/magnifier.png';
 const images = [
-  { id: 1, src: '/gallery01.png' },
-  { id: 2, src: '/gallery02.png' },
-  { id: 3, src: '/gallery03.png' },
-  { id: 4, src: '/gallery04.png' },
-  { id: 5, src: '/gallery05.png' },
-  { id: 6, src: '/gallery06.png' },
-  { id: 7, src: '/gallery07.png' },
+  { id: 1, src: '/gallery/gallery01.png' },
+  { id: 2, src: '/gallery/gallery02.png' },
+  { id: 3, src: '/gallery/gallery03.png' },
+  { id: 4, src: '/gallery/gallery04.png' },
+  { id: 5, src: '/gallery/gallery05.png' },
+  { id: 6, src: '/gallery/gallery06.png' },
+  { id: 7, src: '/gallery/gallery07.png' },
 ];
 
 import { LeftArrow } from '../header-slider/components/left-arrow/left-arrow';
@@ -116,7 +116,7 @@ export const Gallery = () => {
           <ToggleButton onClick={() => setToggler(!toggler)}>
             <img src={magnifier} alt="Slider full screen icon" />
           </ToggleButton>
-          <FsLightbox toggler={toggler} sources={[`/gallery0${currentSlide + 1}.png`]} />
+          <FsLightbox toggler={toggler} sources={[`/gallery/gallery0${currentSlide + 1}.png`]} />
         </FullScreenContainer>
       </>
     </Container>

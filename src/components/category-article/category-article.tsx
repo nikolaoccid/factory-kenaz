@@ -6,10 +6,10 @@ import articleAuthor from '/article-author.png';
 import articleImageBody from '/article-book.png';
 import articleHero from '/article-hero.png';
 import articleImage from '/article-image-mountain.png';
+import articleImg from '/article-image-mountain.png';
+import calendarImg from '/calendar-icon.png';
 
 import { articleNameDashes } from '../../utils/article-name-dashes';
-import articleImg from './assets/article-image.png';
-import calendarImg from './assets/calendar.png';
 import { ArticleCtaButton } from './components/article-cta-button/article-cta-button';
 interface Props {
   title: string;
